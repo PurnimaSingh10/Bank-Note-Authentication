@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head> <h1> <center>Welcome All</center> </h1>
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"> 	
+	
+ </head>
+<body>
+
+<center>
+<p class="solid"></p>
+<form action="{{ url_for('predict') }}" method="POST">
+<table>
+<tr>
+ <td>  <label>Variance</label></td>
+  <td> <input type="text" class="rcorners4" name="variance"/></td></br>
+</tr>
+<tr>
+  <td> <label>Skewness</label></td>
+  <td>  <input type="text" class="rcorners4" name="skewness"/></td></br>
+</tr>
+ <tr>
+    <td><label>Curtosis</label></td>
+    <td><input type="text" class="rcorners4" name="curtosis"/></td></br>
+</tr>
+<tr>
+    <td><label>Entropy</label></td>
+    <td><input type="text" class="rcorners4" name="entropy"/></td></br>
+</tr>
+
+
+<tr><td></td><td><input type="Submit" class="rcorners4" value="Predict"/></td></tr>
+
+<tr>
+	<td><label>The Predictd value is</label></td>
+ 	<td>{{glon}}</td></br>
+
+
+ </tr>
+
+</table>
+
+
+</br></br></br></br>
+
+</form>
+
+
+<p class="solid"></p>
+
+
+
+</center>
+
+</body>
+</html>
